@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #formulario {
+            display: block;
+            max-width: 500px;
+            align-content: center;
+            outline: black solid 1px;
+        }
+
+        #loggedUser{
+            display: none;
+        }
+
+        form label {
+            display: inline-block;
+            align-content: center;
+        }
+
+        form input {
+            display: inline-block;
+            align-content: center;
+        }
+
+        .error {
+            color: red;
+            display: none;
+        }
+
+    </style>
+
+    <script src="scriptLogin.js"></script>
+</head>
+<body onload="showUsernameIfLoggedIn()">
+
+<div>
+    <label id="loggedUser"></label>
+</div>
+
+<form id="formulario" action="javascript:login(username.value, password.value)">
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username"><br>
+    <label id="errorUser" class="error">Hace falta poner un nombre de usuario</label><br>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password"><br>
+    <label id="errorPass" class="error">Hace falta poner un password</label><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+</body>
+</html>
